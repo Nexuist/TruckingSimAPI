@@ -37,14 +37,30 @@ The `fetchCompany()` function can be used to get information about a company, su
    ```
 Type can be one of the following values: `users`, `ads`, `finances`, `contracts`, `routes` or `terminals`. Company must be a full valid company name, no wildcards are allowed.
 
-##Miscellaneous data
+##Miscellaneous Data
 
-The TruckingSim API provides access to all city, contract, and cargo. This data can be accessed with the `fetchInfo()` function. `fetchInfo()` accepts one argument: type. Type can be `contracts`, `cargo`, or `cities`.
+The TruckingSim API provides access to all city, contract, and cargo. This data can be accessed with the `fetchInfo()` function.
+   ```python
+   api.fetchInfo(type)
+   ```
+Type can be `contracts`, `cargo`, or `cities`.
 
 ##Calculating Distances
 
-The TruckingSim API has one extra function, `fetchDistance()`. `fetchDistance()` accepts two parameters: `from` and `to`. These parameters can contain wildcards (*).
+There is one extra function, `fetchDistance()`.
+  ```python
+  api.fetchDistance(from, to)
+  ```
+`From` and `to` are the name of cities. Wildcards are allowed (*).
 
 ##Handling Data
 
-All functions return a string encoded in JSON which you can then manipulate to get the information you want.
+All functions return a string encoded in JSON which you can then manipulate.
+##License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">
+<img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
+</a><br />
+This work is licensed under a 
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+
